@@ -61,3 +61,5 @@ function generateToken(user) {
   };
   return jwt.sign(payload, secrets.jwtSecret, options);
 }
+
+module.exports = router;
