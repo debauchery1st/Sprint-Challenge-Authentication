@@ -19,7 +19,7 @@ router.post(
           password: bcrypt.hashSync(req.body.password, 13)
         })
         .then(newUser =>
-          api.findById(newUser[0]).then(nu => res.status(200).json(nu))
+          api.findById(newUser[0]).then(nu => res.status(201).json(nu))
         )
         .catch(({ name, message, stack }) =>
           res.status(500).json({ name, message, stack })
